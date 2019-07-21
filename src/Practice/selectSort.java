@@ -15,7 +15,24 @@ package Practice;
  */
 public class selectSort {
 
-
+    public static int[] sort(int[] array) {
+        int index;
+        int min;
+        for (int i = 0; i < array.length; i++) {
+            index = i;
+            min = array[i];
+            for (int j = i; j < array.length; j++) {
+                if (array[j] < min) {
+                    min = array[j];
+                    index = j;
+                }
+            }
+            int t = array[i];
+            array[i] = array[index];
+            array[index] = t;
+        }
+        return array;
+    }
 
 
     public static void main(String[] args) {
