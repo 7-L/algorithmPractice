@@ -48,6 +48,8 @@ public class reverseList {
             //直接输出pre就是我们想要得到的反转后的链表
             return pre;
         }
+
+
     }
 
 
