@@ -22,6 +22,8 @@ public class quickSort {
         for (int a : sort2(arr, 0, arr.length - 1)) {
             System.out.println("quickSort2---" + a);
         }
+        String str = new String("1");
+        str.intern();
     }
 
     public static int[] sort(int[] array, int left, int right) {
