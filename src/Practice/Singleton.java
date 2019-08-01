@@ -9,12 +9,14 @@ package Practice;
  */
 
 /**
- *@author hzx
- *@createTime 31 20:06
- *@description
+ * @author hzx
+ * @createTime 31 20:06
+ * @description
  */
+
+//懒汉式
 public class Singleton {
-//    需要加上volatile关键字来保证线程安全 对于双重检测的时候
+    //    需要加上volatile关键字来保证线程安全 对于双重检测的时候
     private static volatile Singleton singleton = null;
 
     private Singleton() {
