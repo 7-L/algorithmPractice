@@ -54,4 +54,7 @@ public class Singleton {
     public static final Singleton getInstance3() {
         return LazyLoader.SINGLETON;
     }
+
+
+
 }
