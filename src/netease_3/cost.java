@@ -44,7 +44,7 @@ import java.util.Vector;
  *
  * 0
  */
-public class cost {
+public class  cost {
 
 
 
