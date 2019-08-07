@@ -29,6 +29,11 @@ public class KMP_Practise {
         char[] chars2 = string2.toCharArray();
         String string3 = "abceac";
         char[] chars3 = string3.toCharArray();
+      /*
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder = stringBuilder.append("1234");
+        */
+        System.out.println(string1);
         for (int i = 0; i < chars1.length; i++) {
             if (chars1[i] != chars2[0]) {
                 continue;
@@ -59,5 +64,9 @@ public class KMP_Practise {
                 System.out.println(i - chars2.length + 1);
             }
         }
+    }
+
+    private static void KMPSolution(char[] chars1, char[] chars2) {
+
     }
 }
