@@ -22,18 +22,14 @@ public class quickSort {
         for (int a : sort2(arr, 0, arr.length - 1)) {
             System.out.println("quickSort2---" + a);
         }
-        String str = new String("1");
-        str.intern();
     }
 
-    public static int[] sort(int[] array, int left, int right) {
+    private static int[] sort(int[] array, int left, int right) {
         if (left < right) {
             int partitionIndex = partition(array, left, right);
             sort(array, left, partitionIndex - 1);
             sort(array, partitionIndex + 1, right);
-//            HashMap;
         }
-        Hashtable hashtable = new Hashtable();
         return array;
     }
 
@@ -48,19 +44,21 @@ public class quickSort {
         }
         swap(array, pivot, index - 1);
         return index - 1;
+
     }
 
-    private static void swap(int[] arr, int i, int j) {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
+    private static void swap(int[] array, int pivot, int i) {
+        int temp = array[pivot];
+        array[pivot] = array[i];
+        array[i] = temp;
     }
 
     public static int[] sort2(int[] array, int left, int right) {
         if (left < right) {
             int partitionIndex = partition2(array, left, right);
-            sort2(array, left, partitionIndex - 1);
+
             sort2(array, partitionIndex + 1, right);
+            sort2(array, left, partitionIndex - 1);
         }
         return array;
     }
