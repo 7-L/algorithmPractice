@@ -11,9 +11,7 @@ package algorithm;
 /**
  *@author hzx
  *@createTime 12 15:45
- *@description
+ *@description  有两张方法，利用Arrays.sort来排序，第二个用顶堆排
  */
 public class TopK {
-    public static void main(String[] args) {
-    }
 }
