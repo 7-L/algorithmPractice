@@ -8,9 +8,6 @@ package Practice;
  * @version V1.0
  */
 
-import java.util.HashMap;
-import java.util.Hashtable;
-
 /**
  * @author hzx
  * @createTime 21 14:13
@@ -21,6 +18,16 @@ public class quickSort {
         int[] arr = new int[]{11, 23, 14, 44, 63, 10, 8, 4, 6, 1};
         for (int a : sort2(arr, 0, arr.length - 1)) {
             System.out.println("quickSort2---" + a);
+        }
+        int[] sorted = sort2(arr, 0, arr.length - 1);
+        for (int i = 0; i < sorted.length/2; i++) {
+            int temp = sorted[i];
+            sorted[i] = sorted[sorted.length - 1 - i];
+            sorted[sorted.length - 1 - i] = temp;
+        }
+
+        for (int b : sorted) {
+            System.out.println("翻转数组---" + b);
         }
     }
 
