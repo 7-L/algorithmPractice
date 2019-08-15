@@ -1,5 +1,6 @@
 package leetcode;
 import	java.util.Scanner;
+import java.util.Stack;
 /**
  * @Project: nowcoder_test
  * @Package leetcode
@@ -23,6 +24,7 @@ public class StringLegal {
         if (isLegel(a)) {
             System.out.println("true");
         }
+        System.out.println(useStack(a));
     }
 
     private static boolean isLegel(String a) {
@@ -32,6 +34,25 @@ public class StringLegal {
             a = a.replace("()", "").replace("{}", "").replace("[]", "");
         } while (length != a.length());
         return a.length() == 0;
+    }
+
+    private static boolean useStack(String s) {
+        if ((s.length() & 1) == 1) {
+            return false;
+        }
+        Stack<Character> stack = new Stack<>();
+        for (char temp : s.toCharArray()) {
+            if (temp == '(') {
+                stack.push(')');
+            } else if (temp == '{') {
+                stack.push('}');
+            } else if (temp == '[') {
+                stack.push(']');
+            } else if (stack.isEmpty() || stack.pop() != temp) {
+                return false;
+            }
+        }
+        return stack.isEmpty();
     }
 
 }
