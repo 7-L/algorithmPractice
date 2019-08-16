@@ -55,4 +55,24 @@ public class StringLegal {
         return stack.isEmpty();
     }
 
+    private static boolean useStackTry(String string) {
+        int length = string.length();
+        if ((length & 1) == 1) {
+            return false;
+        }
+        Stack<Character> stack = new Stack<> ();
+        for (char temp : string.toCharArray()) {
+            if (temp == '(') {
+                stack.push(')');
+            } else if (temp == '[') {
+                stack.push(']');
+            } else if (temp == '{') {
+                stack.push('}');
+            } else if (stack.isEmpty() || stack.pop() != temp) {
+                return false;
+            }
+        }
+        return stack.isEmpty();
+    }
+
 }
