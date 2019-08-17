@@ -14,7 +14,7 @@
  */
 public class Node {
     private final int value;
-    private Node next;
+    static Node next;
 
     public Node(int value) {
         this.value = value;
