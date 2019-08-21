@@ -20,7 +20,7 @@ import java.util.PriorityQueue;
 public class TopK {
 //    通过使用priorityqueue来实现大小顶堆,PQ默认是小顶堆
     public static int[] findKMax(int[] nums, int k) {
-        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>(k);
+        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>(6);
         for (int num : nums) {
             if (priorityQueue.size() < k) {
                 priorityQueue.offer(num);
@@ -29,8 +29,11 @@ public class TopK {
                 priorityQueue.offer(num);
             }
         }
+        for (Integer integer : priorityQueue) {
+            System.out.println(integer);
+        }
         int[] result = new int[k];
-        for (int i = 0; i < k && priorityQueue.isEmpty(); i++) {
+        for (int i = 0; i < k ; i++) {
             result [i] = priorityQueue.poll();
         }
         return result;
@@ -48,9 +51,6 @@ public class TopK {
                 return false;
             }
         });
-        for (Integer integer : array) {
-            System.out.println(integer);
-        }
         System.out.println(Arrays.toString(findKMax(arr,5)));
     }
  }
