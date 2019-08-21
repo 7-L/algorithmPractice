@@ -1,4 +1,5 @@
 package leetcode;
+import	java.awt.TextField;
 /**
  * @Project: nowcoder_test
  * @Package leetcode
@@ -70,10 +71,27 @@ public class leetcode151 {
         return result;
     }
 
+    public static String reverse(String s) {
+        Stack<String> stack = new Stack<>();
+        String temp = null;
+        String[] result = s.split(" ");
+        for (String s1 : result) {
+            stack.push(s1);
+        }
+        while (!stack.empty()) {
+            temp = stack.pop().toString().concat(" ").trim();
+        }
+        System.out.println(temp);
+        return temp;
+    }
 
     public static void main(String[] args) {
-        String abc = "a b  c ";
-        System.out.println(reverseWords2(abc));
+        String[] abc = "aaa bb  c".split(" |");
+        String a = "aaa bb c";
+//        abc.split(" ");
+//        System.out.println((abc));
+//        System.out.println(reverseWords2(abc));
+        System.out.println(reverse(a));
     }
 
 
