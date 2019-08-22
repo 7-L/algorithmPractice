@@ -16,8 +16,8 @@ package Practice;
 public class quickSort {
     public static void main(String[] args) {
         int[] arr = new int[]{11, 23, 14, 44, 63, 10, 8, 4, 6, 1};
-        for (int a : sort2(arr, 0, arr.length - 1)) {
-            System.out.println("quickSort2---" + a);
+        for (int a : sort3(arr, 0, arr.length - 1)) {
+            System.out.println("quickSort3---" + a);
         }
         int[] sorted = sort2(arr, 0, arr.length - 1);
         for (int i = 0; i < sorted.length/2; i++) {
@@ -89,6 +89,36 @@ public class quickSort {
         array[j] = temp;
     }
 
+    private static int[] sort3(int[] array, int left, int right) {
+        if (left < right) {
+            int parentIndex = partition3(array, left, right);
+            sort3(array, left, parentIndex - 1);
+            sort3(array, parentIndex + 1, right);
+
+        }
+        return array;
+    }
+
+    private static int partition3(int[] array, int left, int right) {
+        int pivot = left;
+        int index = pivot + 1;
+        for (int i = index; i <= right; i++) {
+            if (array[i] < array[pivot]) {
+                swap3(array, i, index);
+                index++;
+            }
+        }
+        swap3(array, pivot, index - 1);
+        return index - 1;
+
+
+    }
+
+    private static void swap3(int[] array, int i, int j) {
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
 
 
 }
