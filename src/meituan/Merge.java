@@ -1,4 +1,4 @@
-package algorithm;
+package meituan;
 
 import org.junit.Test;
 /**
