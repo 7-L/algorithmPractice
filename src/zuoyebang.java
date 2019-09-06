@@ -17,7 +17,7 @@ import java.util.Scanner;
  */
 class zuoyebang {
     public static void main(String[] args) {
-      /*  int[] array = new int[4];
+        int[] array = new int[4];
         Scanner in = new Scanner(System.in);
         for (int i = 0; i < 4; i++) {
             array[i] = in.nextInt();
@@ -31,11 +31,11 @@ class zuoyebang {
             }
         }
 
-        int a = (int)Math.random();
+        int a = (int) Math.random();
 
-        System.out.print(result[3]+result[2]+result[1]+result[0]);*/
+        System.out.print(result[3] + result[2] + result[1] + result[0]);
 
-        Scanner in = new Scanner(System.in);
+   /*     Scanner in = new Scanner(System.in);
 
         String a = in.nextLine();
 
@@ -46,7 +46,7 @@ class zuoyebang {
             arr[i] = Integer.parseInt(aa[i]);
         }
         for (int i : arr) {
-            System.out.println(i);
-        }
+            System.out.println(i);*/
     }
 }
+
