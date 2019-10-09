@@ -2,6 +2,9 @@
  * Created by Administrator on 2019/10/3.
  */
 package home;
+
+import static Practice.quickSort.sort2;
+
 public class mergeSort {
 
     public static void main(String[] args) {
@@ -12,9 +15,28 @@ public class mergeSort {
         }
     }
 
+
     public static void mergeSort(int[] arr) {
         sort(arr, 0, arr.length - 1);
+        sort2(arr, 0, arr.length - 1);
     }
+
+    public static void sort2(int[] arr, int l, int r) {
+        if (l == r) {
+            return ;
+        }
+        int mid = (l + r) / 2;
+        sort2(arr, l, mid);
+        sort2(arr, mid + 1, r);
+        merge3(arr, l, mid, r);
+    }
+
+    private static void merge3(int[] arr, int l, int mid, int r) {
+        int p1 = l;
+        int p2 = r;
+
+    }
+
 
     public static void sort(int[] arr, int L, int R) {
         if (L == R) {
